@@ -1,4 +1,5 @@
 # Portfolio
-## O mnie
+## About me
+
 
 
