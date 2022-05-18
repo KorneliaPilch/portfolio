@@ -1,2 +1,4 @@
-# Portfolio Kornelia Pilch 
+# Portfolio
+## O mnie
+
 
