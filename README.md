@@ -11,7 +11,7 @@ Poniżej znajduje się kilka najważniejszych informacji o mnie.
 ## Umiejętności: 
 
 - tworzenie scenariuszy i przypadków testowych;
-- raportowanie błedów;
+- raportowanie błędów;
 - obsługa narzędzi Jira, qTest, TestLink;
 - podstawowa znajomość języka SQL;
 - podstawowa znajomość Git i Github;
