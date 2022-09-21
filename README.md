@@ -18,12 +18,12 @@ Poniżej znajduje się kilka najważniejszych informacji o mnie.
 - znajomość Excel w stopniu średniozaawansowanym.
 
  ## Certyfikaty: 
-- Certyfikat ISTQB  
+- Certyfikat ISTQB (17.03.2022) 
 
 ## Szkolenia: 
-- "Podstawy manualnego testowania oprogramowania." (www.udemy.com)
-- "Excel Mistrz."(www.udemy.com)
-- "Git od podstaw dla każdego." (www.udemy.com)
+- "Podstawy manualnego testowania oprogramowania" (www.udemy.com)
+- "Excel Mistrz"(www.udemy.com)
+- "Git od podstaw dla każdego" (www.udemy.com)
 
 ## Projekty: 
-- COLT 1/2022 Anna Czyrko (blog: cherry-it.pl)
+- "Pierwsze repozytorium juniora testera manualnego" COLT 1/2022 Anna Czyrko (blog: cherry-it.pl)
