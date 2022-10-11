@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "ac9e776f-56e8-49e4-88a4-b6047729ca4e",
+		"name": "Strava Collection (Add&Delete)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23496878"
+	},
+	"item": [
+		{
+			"name": "Add activity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer yourStravaAccessToken",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.strava.com/api/v3/activities?name=MorningRun&sport_type=Run&start_date_local=\"2021-02-20T18:02:13Z\"&elapsed_time=18373",
+					"protocol": "https",
+					"host": [
+						"www",
+						"strava",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "MorningRun"
+						},
+						{
+							"key": "sport_type",
+							"value": "Run"
+						},
+						{
+							"key": "start_date_local",
+							"value": "\"2021-02-20T18:02:13Z\""
+						},
+						{
+							"key": "elapsed_time",
+							"value": "18373"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List add activity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.strava.com/api/v3/athlete/activities?page=1&per_page=3&access_token=2c1234c12a34d12a34abcd123be1234",
+					"protocol": "https",
+					"host": [
+						"www",
+						"strava",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"athlete",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "3"
+						},
+						{
+							"key": "access_token",
+							"value": "2c1234c12a34d12a34abcd123be1234"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
