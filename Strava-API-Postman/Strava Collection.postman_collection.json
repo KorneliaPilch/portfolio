@@ -66,6 +66,154 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Acces token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer yourStravaAccessToken",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.strava.com/oauth/token?client_id=12345&client_secret=456cd45cd45cd4556cd465cd465cd456cd465dc&code=123abcd123abcd123abcd123abcd123abc123abcd&grant_type=authorization_code",
+					"protocol": "https",
+					"host": [
+						"www",
+						"strava",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "12345"
+						},
+						{
+							"key": "client_secret",
+							"value": "456cd45cd45cd4556cd465cd465cd456cd465dc"
+						},
+						{
+							"key": "code",
+							"value": "123abcd123abcd123abcd123abcd123abc123abcd"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Athlete Activities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.strava.com/api/v3/athlete/activities?after=1664256206&access_token=1234abc123abc123abc123abc123abc123abc",
+					"protocol": "https",
+					"host": [
+						"www",
+						"strava",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"athlete",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "after",
+							"value": "1664256206"
+						},
+						{
+							"key": "access_token",
+							"value": "1234abc123abc123abc123abc123abc123abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify name\", () => {\r",
+							"    const resData = pm.response.json();\r",
+							"    /*console.log(resData.name);*/\r",
+							"    pm.expect(resData.name).to.be.equal(\"Morning Ride\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Verify distance\", () => {\r",
+							"    const resData = pm.response.json();\r",
+							"    /*console.log(resData.distance);*/\r",
+							"    pm.expect(resData.distance).to.be.equal(\"13402.6\");\r",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer yourStravaAccessToken",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.strava.com/api/v3/activities/7879804365",
+					"protocol": "https",
+					"host": [
+						"www",
+						"strava",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"activities",
+						"7879804365"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
